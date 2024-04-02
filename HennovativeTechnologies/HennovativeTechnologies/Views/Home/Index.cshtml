@@ -1,8 +1,51 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hennovative</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="page-header">
+        <div class="left">
+            <h2 class="center">Hennovative</h2>
+        </div>
+        <img src="~/images/logo.png" width="200" height="200" />
+        <div class="right">
+            <h2 class="center">Hub</h2>
+        </div>
+    </header>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+    <div class="search-bar-container">
+        <form id="searchForm">
+            <input type="search" id="searchInput" placeholder="Search...">
+            <button type="submit" id="searchButton">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </button>
+        </form>
+    </div>
+
+    <div class="site-features-header">
+       
+    </div>
+
+    <div class="large-rectangles-container">
+        <div class="rectangle rectangle-1">
+            <img src="~/images/yeah.jpg" alt="Placeholder Image">
+        </div>
+        <div class="rectangle rectangle-2">
+            <img src="~/images/yeah.jpg" alt="Placeholder Image">
+        </div>
+        <div class="rectangle rectangle-3">
+            <img src="~/images/yeah.jpg" alt="Placeholder Image" />
+        </div>
+        <div class="rectangle rectangle-4">
+            <img src="~/images/yeah.jpg" alt="Placeholder Image">
+        </div>
+        <div class="rectangle rectangle-5">
+            <img src="~/images/yeah.jpg" alt="Placeholder Image">
+        </div>
+    </div>
+</body>
+</html>
