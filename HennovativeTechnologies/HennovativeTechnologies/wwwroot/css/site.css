@@ -169,7 +169,7 @@ div.left {
 }
 
 /* Slider css for image page */
-#sliders {
+#settings {
     position: fixed;
     right: 75%; /* Position the sliders to the left of the chat */
     bottom: 50%; /* Position the sliders halfway up the page */
@@ -183,6 +183,15 @@ div.left {
     justify-content: space-around;
     background-color: #f8f8f8;
 }
+
+    #settings div {
+        display: flex;
+        align-items: center;
+    }
+
+    #settings label {
+        margin-right: 10px;
+    }
 
 .slider {
     -webkit-appearance: none;
@@ -199,4 +208,5 @@ div.left {
     .slider:hover {
         opacity: 1;
     }
+
 

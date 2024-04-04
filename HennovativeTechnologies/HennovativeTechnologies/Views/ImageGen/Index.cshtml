@@ -8,14 +8,26 @@
 
 <p>Welcome to the Image Generator page!</p>
 
-@*settings div*@
-<div id="sliders">
-    <input type="range" min="1" max="100" value="50" class="slider">
-    <input type="range" min="1" max="100" value="50" class="slider">
-    <input type="range" min="1" max="100" value="50" class="slider">
-    <input type="range" min="1" max="100" value="50" class="slider">
-    <input type="range" min="1" max="100" value="50" class="slider">
+@*settings div *@
+<div id="settings">
+    <label for="style">Style:</label>
+    <div>
+        <input type="radio" id="realistic" name="style" value="realistic">
+        <label for="realistic">Realistic</label>
+    </div>
+    <div>
+        <input type="radio" id="cartoon" name="style" value="cartoon">
+        <label for="cartoon">Cartoon</label>
+    </div>
+    <div>
+        <input type="radio" id="anime" name="style" value="anime">
+        <label for="anime">Anime</label>
+    </div>
+
+    <label for="imageSize">Image Size:</label>
+    <input type="range" min="1" max="100" value="50" class="slider" id="imageSize">
 </div>
+
 
 @* chat div *@
 <div id="chat">
@@ -46,7 +58,7 @@
 
             // Display a predetermined response
             var responseMessageDiv = document.createElement('div');
-            responseMessageDiv.textContent = 'This is a predetermined message.';
+            responseMessageDiv.textContent = '** your image ** ';
             responseMessageDiv.className = 'bot-message';
             messagesDiv.appendChild(responseMessageDiv);
         });
