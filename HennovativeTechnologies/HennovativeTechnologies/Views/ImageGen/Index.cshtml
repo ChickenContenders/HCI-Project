@@ -4,6 +4,12 @@
 @{
     ViewData["Title"] = "Image Generator"; 
 }
+<head>
+    ...
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    ...
+</head>
+
 <h1>@ViewData["Title"]</h1>
 
 <p>Welcome to the Image Generator page!</p>
@@ -58,8 +64,17 @@
 
             // Display a predetermined response
             var responseMessageDiv = document.createElement('div');
-            responseMessageDiv.textContent = '** your image ** ';
+            responseMessageDiv.textContent = 'This is a predetermined message.';
             responseMessageDiv.className = 'bot-message';
+
+            // Create a download icon
+            var downloadIcon = document.createElement('i');
+            downloadIcon.className = 'fas fa-download';
+            downloadIcon.style.marginLeft = '10px';
+
+            // Append the download icon to the response message
+            responseMessageDiv.appendChild(downloadIcon);
+
             messagesDiv.appendChild(responseMessageDiv);
         });
     </script>
