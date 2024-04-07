@@ -17,7 +17,22 @@ namespace HennovativeTechnologies.Controllers
         {
             return View();
         }
-
+        public IActionResult RecipeChat()
+        {
+            return View();
+        }
+        public IActionResult ProgramChat()
+        {
+            return View();
+        }
+        public IActionResult QuestionChat()
+        {
+            return View();
+        }
+        public IActionResult PunChat()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();

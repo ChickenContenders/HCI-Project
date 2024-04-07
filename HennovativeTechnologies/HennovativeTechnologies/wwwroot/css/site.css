@@ -1,24 +1,24 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
 }
 
 .logo-container {
@@ -120,3 +120,50 @@ div.right {
 div.left {
     text-align: left;
 }
+
+.navbar {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #c74b1a;
+    padding: 10px;
+}
+
+    .navbar img {
+        height: 50px;
+    }
+
+    .navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+        .navbar ul li {
+            margin: 0;
+        }
+
+            .navbar ul li a {
+                color: white;
+                text-decoration: none;
+                padding: 25px; /* Add padding to create a box around the text */
+                transition: background-color 0.3s ease; /* Add transition for smooth color change */
+            }
+
+                .navbar ul li a:hover {
+                    background-color: #c75c1a; /* Change background color on hover */
+                }
+
+.company-name {
+    color: white;
+    text-align:left;
+    margin-right: 1100px; /* Adjust the margin as needed */
+}
+
+    .company-name a {
+        text-decoration: none;
+        color: white;
+    }
+
