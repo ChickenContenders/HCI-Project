@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Recipe Bot Interface</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eeeeee;
+            margin: 0;
+        }
+        #chatArea {
+            width: 90%;
+            height: 70vh;
+            background-color: white;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            overflow-y: auto;
+            margin: 0 auto; 
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        #inputContainer {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        #userInput {
+            width: 100%; /* Adjust this value to make the input box wider */
+            margin: 0 auto; 
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        #sendButton {
+            width: 10%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #4CAF50; /* Change to desired color */
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #sendButton:hover {
+            background-color: #45a049;
+        }
+        .userMessage {
+            background-color: #007bff; /* Blue background */
+            color: white; /* White text */
+            border-radius: 20px; /* Curved border */
+            padding: 10px; /* Padding around text */
+            margin: 10px 0; /* Space above and below message */
+        
+            width: fit-content; /* Width fits to content */
+            max-width: 100ch; /* Maximum width before text wraps */
+            word-wrap: break-word; /* Break words to next line */
+        }
+        .botMessage {
+            background-color: #f06630;
+            color: white; /* White text */
+            border-radius: 20px; /* Curved border */
+            padding: 10px; /* Padding around text */
+            margin: 10px 0; /* Space above and below message */
+        
+            width: fit-content; /* Width fits to content */
+            max-width: 100ch; /* Maximum width before text wraps */
+            align-self: flex-end; /* Right align */
+            word-wrap: break-word; /* Break words to next line */
+            align-self: flex-end; /* Right align */
+        }
+        .center {
+            display: flex;
+            justify-content: center;
+            height: 10vh;
+            
+        }
+        #banner {
+            box-shadow: 5px 5px 5px grey;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+    <img src="~/images/RecipeBanner.png" alt="banner" id="banner" style="margin-bottom: 5px;">
+    </div>
+    <div id="chatArea">
+        <!-- Chat messages will be appended here -->
+    </div>
+    <div id="inputContainer">
+        <input id="userInput" type="text" placeholder="Type your message here... (How do I make spicy buffalo chicken wings?)">
+        <button id="sendButton">Send</button>
+    </div>
+    <script>
+        document.getElementById('sendButton').addEventListener('click', function() {
+            var userInput = document.getElementById('userInput').value;
+            var chatArea = document.getElementById('chatArea');
+            chatArea.innerHTML += '<div class="userMessage"><p><strong>You:</strong> ' + userInput + '</p></div>';
+            chatArea.innerHTML += '<div class="botMessage"><p><strong>Nugget:</strong>This is the bot\'s response area</p></div>';
+            document.getElementById('userInput').value = '';
+        });
+        document.getElementById('userInput').addEventListener('keyup', function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        var userInput = document.getElementById('userInput').value;
+        var chatArea = document.getElementById('chatArea');
+        chatArea.innerHTML += '<div class="userMessage"><p><strong>You:</strong> ' + userInput + '</p></div>';
+        chatArea.innerHTML += '<div class="botMessage"><p><strong>Nugget:</strong>This is the bot\'s response area</p></div>';
+        document.getElementById('userInput').value = '';
+    }
+});
+    </script>
+</body>
+</html>
