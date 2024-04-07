@@ -158,7 +158,8 @@ div.left {
 
 .company-name {
     color: white;
-    margin-right: 700px; /* Adjust the margin as needed */
+    text-align:left;
+    margin-right: 1100px; /* Adjust the margin as needed */
 }
 
     .company-name a {

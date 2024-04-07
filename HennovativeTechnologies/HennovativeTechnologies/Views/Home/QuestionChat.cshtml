@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>Recipe Bot Interface</title>
+    <title>Question Bot Interface</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -54,7 +54,7 @@
             border-radius: 20px; /* Curved border */
             padding: 10px; /* Padding around text */
             margin: 10px 0; /* Space above and below message */
-        
+
             width: fit-content; /* Width fits to content */
             max-width: 100ch; /* Maximum width before text wraps */
             word-wrap: break-word; /* Break words to next line */
@@ -65,7 +65,7 @@
             border-radius: 20px; /* Curved border */
             padding: 10px; /* Padding around text */
             margin: 10px 0; /* Space above and below message */
-        
+
             width: fit-content; /* Width fits to content */
             max-width: 100ch; /* Maximum width before text wraps */
             align-self: flex-end; /* Right align */
@@ -76,7 +76,7 @@
             display: flex;
             justify-content: center;
             height: 10vh;
-            
+
         }
         #banner {
             box-shadow: 5px 5px 5px grey;
@@ -85,13 +85,13 @@
 </head>
 <body>
     <div class="center">
-    <img src="~/images/RecipeBanner.png" alt="banner" id="banner" style="margin-bottom: 5px;">
+    <img src="~/images/QuestionBanner.png" alt="banner" id="banner" style="margin-bottom: 5px;">
     </div>
     <div id="chatArea">
         <!-- Chat messages will be appended here -->
     </div>
     <div id="inputContainer">
-        <input id="userInput" type="text" placeholder="Type your message here... (How do I make spicy buffalo chicken wings?)">
+        <input id="userInput" type="text" placeholder="Type your message here... (What came first, the chicken or the egg?)">
         <button id="sendButton">Send</button>
     </div>
     <script>
