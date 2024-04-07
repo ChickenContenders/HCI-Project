@@ -1,0 +1,81 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Image Generator"; 
+}
+<head>
+    ...
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    ...
+</head>
+
+<h1>@ViewData["Title"]</h1>
+
+<p>Welcome to the Image Generator page!</p>
+
+@*settings div *@
+<div id="settings">
+    <label for="style">Style:</label>
+    <div>
+        <input type="radio" id="realistic" name="style" value="realistic">
+        <label for="realistic">Realistic</label>
+    </div>
+    <div>
+        <input type="radio" id="cartoon" name="style" value="cartoon">
+        <label for="cartoon">Cartoon</label>
+    </div>
+    <div>
+        <input type="radio" id="anime" name="style" value="anime">
+        <label for="anime">Anime</label>
+    </div>
+
+    <label for="imageSize">Image Size:</label>
+    <input type="range" min="1" max="100" value="50" class="slider" id="imageSize">
+</div>
+
+
+@* chat div *@
+<div id="chat">
+    <div id="messages"></div>
+
+    <form id="chatForm" class="chat-form">
+        <input type="text" id="userInput" placeholder="Type your prompt here..." />
+        <button type="submit">Send</button>
+    </form>
+</div>
+@*chat logic*@
+@section Scripts {
+    <script>
+        document.getElementById('chatForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var userInput = document.getElementById('userInput').value;
+            var messagesDiv = document.getElementById('messages');
+
+            // Display the user's message
+            var userMessageDiv = document.createElement('div');
+            userMessageDiv.textContent = userInput;
+            userMessageDiv.className = 'user-message';
+            messagesDiv.appendChild(userMessageDiv);
+
+            // Clear the input field
+            document.getElementById('userInput').value = '';
+
+            // Display a predetermined response
+            var responseMessageDiv = document.createElement('div');
+            responseMessageDiv.textContent = 'This is a predetermined message.';
+            responseMessageDiv.className = 'bot-message';
+
+            // Create a download icon
+            var downloadIcon = document.createElement('i');
+            downloadIcon.className = 'fas fa-download';
+            downloadIcon.style.marginLeft = '10px';
+
+            // Append the download icon to the response message
+            responseMessageDiv.appendChild(downloadIcon);
+
+            messagesDiv.appendChild(responseMessageDiv);
+        });
+    </script>
+}
