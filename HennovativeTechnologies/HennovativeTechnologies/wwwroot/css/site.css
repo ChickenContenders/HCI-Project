@@ -127,8 +127,8 @@ div.left {
     position: fixed;
     right: 20px; /* Add some space from the right border */
     bottom: 50%; /* Position the chat box halfway up the page */
-    transform: translateY(50%); /* This is needed to correctly center the chat box */
-    width: 600px;
+    transform: translateY(65%); /* This is needed to correctly center the chat box */
+    width: 50%;
     height: 500px;
     border: 1px solid #ccc;
     padding: 10px;
@@ -172,8 +172,8 @@ div.left {
 /* Slider css for image page */
 #settings {
     position: fixed;
-    right: 75%; /* Position the sliders to the left of the chat */
-    bottom: 50%; /* Position the sliders halfway up the page */
+    right: 65%; /* Position the sliders to the left of the chat */
+    bottom: 35%; /* Position the sliders halfway up the page */
     transform: translateY(50%); /* This is needed to correctly center the sliders */
     width: 300px;
     height: 300px;
@@ -184,7 +184,6 @@ div.left {
     justify-content: space-around;
     background-color: #f8f8f8;
 }
-
     #settings div {
         display: flex;
         align-items: center;
