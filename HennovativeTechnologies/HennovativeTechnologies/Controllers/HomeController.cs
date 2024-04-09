@@ -1,4 +1,5 @@
 ﻿using HennovativeTechnologies.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -13,26 +14,32 @@ namespace HennovativeTechnologies.Controllers
             _logger = logger;
         }
 
+        [Authorize]
         public IActionResult Index()
         {
             return View();
         }
+        [Authorize]
         public IActionResult RecipeChat()
         {
             return View();
         }
+        [Authorize]
         public IActionResult ProgramChat()
         {
             return View();
         }
+        [Authorize]
         public IActionResult QuestionChat()
         {
             return View();
         }
+        [Authorize]
         public IActionResult PunChat()
         {
             return View();
         }
+        [Authorize]
         public IActionResult Privacy()
         {
             return View();

@@ -45,15 +45,7 @@
                         <a asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">Logout</a>   
                     </li>
                 }
-                else
-                {
-                    <li>
-                        <a asp-area="Identity" asp-page="/Account/Register">Register</a>
-                    </li>
-                    <li>
-                        <a asp-area="Identity" asp-page="/Account/Login">Login</a>
-                    </li>
-                }
+                
             </ul>
         </div>
     </header>
